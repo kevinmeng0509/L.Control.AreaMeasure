@@ -2,6 +2,10 @@
 Area Measure Control for Leaflet
 
 ## Demo
+just enable area measure control when creating map object like this
+<p>
+var map=L.map('map', {areaMeasureControl : true});
+<p>
 <a href="demo.html">a simple demo</a>
 <p>
 <a href="http://www.map512.cn">more example...</a>
