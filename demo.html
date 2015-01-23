@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Area Measure Control for Leaflet</title>
+<link rel="stylesheet"
+	href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<style type="text/css">
+body,td,th {
+	font-size: 14px;
+}
+
+body,html {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<link rel="stylesheet" href="css/L.Control.AreaMeasure.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script type="text/javascript" src="src/leaflet.geometryutil.js"></script>
+<script type="text/javascript" src="src/L.Control.AreaMeasure.js"></script>
+</head>
+<body>
+	<div id="top">
+		Area Measure Control for Leaflet.
+		<p>Author:kevin meng
+		<P>
+	</div>
+	<div id="map" style="height: 480px; width: 100%"></div>
+</body>
+<script>
+	var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors', osm = L
+			.tileLayer(osmUrl, {
+				maxZoom : 18,
+				attribution : osmAttrib
+			});
+
+	var map = L.map('map', {areaMeasureControl : true}).setView([ 51.505, -0.159 ], 15).addLayer(osm);
+</script>
+</html>
